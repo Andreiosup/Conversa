@@ -26,8 +26,8 @@ const DeleteCommunityModal = () => {
 
             await axios.delete(`/api/communities/${community?.id}`)
 
-            onClose();
             router.refresh();
+            onClose();
             router.push("/");
 
         } catch (error) {

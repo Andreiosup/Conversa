@@ -26,8 +26,8 @@ const LeaveModal = () => {
 
             await axios.patch(`/api/communities/${community?.id}/leave`)
 
-            onClose();
             router.refresh();
+            onClose();
             router.push("/");
 
         } catch (error) {
